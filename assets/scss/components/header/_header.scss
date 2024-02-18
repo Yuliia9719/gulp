@@ -1,0 +1,48 @@
+@use"../../presets" as*;
+.header {
+  padding-top: 66px;
+  padding-bottom: 100px;
+
+  background-color: $color-light-gray;
+
+  @media (min-width:992px) {
+    min-height: 700px;
+  }
+}
+
+.navbar {
+  margin-bottom: 134px;
+
+  @media (max-width:991.8px) {
+    margin-bottom: 65px;
+  }
+
+  &__list {
+    display: flex;
+
+    column-gap: 43px;
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 0 43px;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    padding: $gap-sm 0;
+
+    letter-spacing: $letter-spacing;
+
+    color: $color-black;
+
+    line-height: $line-height-lg;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use"../../presets" as*;
+@use"../mixins" as*;
+
+.experience {
+  padding: 100px 0 88px;
+
+  @include color;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: $gap;
+
+    @media (max-width:991.8px) {
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    display: flex;
+
+    gap: $gap;
+
+    @media (max-width:991.8px) {
+      flex-basis: 25%;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+
+      gap: 7px;
+    }
+
+    &__number {
+      font-size: 1.3125rem;
+      /*21px*/
+      font-weight: 500;
+    }
+
+    &__image {
+      order: -1;
+    }
+  }
+}

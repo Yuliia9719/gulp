@@ -1,0 +1,18 @@
+@use"../../presets" as*;
+
+@mixin description() {
+  color: $color-secondary;
+
+  line-height: $line-height-lg;
+}
+
+@mixin common-title() {
+  color: $color-black;
+
+  font-weight: 500;
+}
+
+@mixin color() {
+  color: $color-white;
+  background-color: $color-primary;
+}

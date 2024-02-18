@@ -1,0 +1,51 @@
+@use"../../presets" as*;
+@use"../mixins" as*;
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  max-width: 540px;
+
+  gap: 30px;
+  @media (max-width: 576px) {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+
+    font-size: 3rem;
+    font-style: normal;
+    line-height: $line-height-lg;
+
+    @include common-title;
+
+    @media (max-width:991.8px) {
+      line-height: $line-height-sm;
+    }
+  }
+
+  &__description {
+    margin-bottom: 26px;
+
+    @include description;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 225px;
+    min-height: 65px;
+
+    letter-spacing: $letter-spacing;
+
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}

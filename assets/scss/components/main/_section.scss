@@ -1,0 +1,25 @@
+@use"../../presets" as*;
+@use"../mixins" as*;
+
+.common-section {
+  padding-top: 112px;
+  padding-bottom: 90px;
+
+  background-color: $color-light;
+
+  &__title {
+    margin-bottom: 39px;
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    @include common-title;
+  }
+
+  &__description {
+    text-align: center;
+
+    @include description;
+  }
+}
